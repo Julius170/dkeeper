@@ -27,8 +27,8 @@ function App() {
     setNotes(notesArray);
   } 
   function deleteNote(id) {
+    dkeeper.removeNote(id);
     setNotes(prevNotes => {
-      dkeeper.removeNote(id);
       return prevNotes.filter((noteItem, index) => {
         return index !== id;
       });
@@ -56,4 +56,3 @@ function App() {
 }
 
 export default App;
-

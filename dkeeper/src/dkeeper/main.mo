@@ -24,8 +24,8 @@ actor DKeeper {
   };
 
   public func removeNote(id: Nat) {
-    let listFront = List.take(notes, id)
-    let listBack = List drop(notes, id+1)
+    let listFront = List.take(notes, id);
+    let listBack = List drop(notes, id+1);
     notes:= List.append(listFront, listBack);
   };
 }
