@@ -28,6 +28,7 @@ function App() {
   } 
   function deleteNote(id) {
     setNotes(prevNotes => {
+      dkeeper.removeNote(id);
       return prevNotes.filter((noteItem, index) => {
         return index !== id;
       });
